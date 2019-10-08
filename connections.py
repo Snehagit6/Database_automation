@@ -1,7 +1,7 @@
 import pymysql
 
 
-def main():
+def database_conn():
 
     try:   # Establish a connection to MySQL database
         con=pymysql.connect\
@@ -18,5 +18,3 @@ def main():
 def closing_conn():
     main().close()
 
-if '__name__'=='__main__':
-    main()
