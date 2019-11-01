@@ -1,9 +1,9 @@
 from utilities.structuring_data import excel_sheet_data,csv_data,table_data
 from operator import itemgetter
 
-def compare_source_target(data, param1, param2,s_key, t_key):
+def compare_source_target(name, param1, param2,s_key, t_key):
     row = 1
-    sheet_name = list(data.keys())[0]
+    sheet_name = name
     if sheet_name == 'files':
         param1 = csv_data(param1)
         param2 = csv_data(param2)

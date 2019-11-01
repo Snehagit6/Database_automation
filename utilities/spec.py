@@ -8,6 +8,8 @@ class Spec():
     '''
 
     def __init__(self, **kwargs):
+        self.sheet_name = ''
+        self.data = {}
         self.params = []
 
 
@@ -26,8 +28,8 @@ class Spec():
             :return:
             '''
             try:
+              self.data = excel_sheet_data()
               func(excel_sheet_data())
-
             except Exception as e:
                 pprint("Exception".format(e.args))
 
@@ -59,7 +61,7 @@ class Spec():
 
     def step(self, func):
         def inner(*args, **kwargs):
-            func(self.params[0])
+            func(self.sheet_name, self.params[0])
         return inner
 
 
