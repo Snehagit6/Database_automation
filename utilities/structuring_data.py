@@ -1,6 +1,7 @@
 import os
 import csv, openpyxl
-from connections import database_connection
+import pandas
+from Database_automation.connections import database_connection
 
 
 def excel_sheet_data():
@@ -39,6 +40,7 @@ def csv_data(file, **kwargs):
             reader = csv.reader(f1, delimiter=',')
             header = next(reader)
             records = [row for row in reader if row]
+            csv_df = pandas.read_csv(file)
             param = [dict(zip(header, each)) for each in records]
             return param
     except FileNotFoundError as e:
