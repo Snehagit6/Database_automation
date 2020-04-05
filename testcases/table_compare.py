@@ -28,7 +28,5 @@ def step(data, param, **kwargs):
                           param['Target_key'])
 
 
-map_param({})
-setup({})
-step({})
+
 
