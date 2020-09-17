@@ -2,11 +2,11 @@
 # runpy.run_module("file_compare.py",'__main__')
 
 from inspect import getmembers, isfunction, ismethod
-from Database_automation.testcases import file_compare
-from Database_automation.utilities.spec import Spec
-from Database_automation.Logging.record_process import Log_Progress
+from testcases import file_compare
+from utilities.spec import Spec
+from Logging.record_process import Logging
 
-logs = Log_Progress()
+logs = Logging()
 spec = Spec()
 
 # import runpy
