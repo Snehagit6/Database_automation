@@ -1,4 +1,4 @@
-from Database_automation.utilities.structuring_data import excel_sheet_data,csv_data,table_data
+from utilities.structuring_data import excel_sheet_data,csv_data,table_data
 from operator import itemgetter
 
 def compare_source_target(name, param1, param2,s_key, t_key):

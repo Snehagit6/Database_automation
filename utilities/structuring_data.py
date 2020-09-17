@@ -1,7 +1,7 @@
 import os
 import csv, openpyxl
 import pandas
-from Database_automation.connections import database_connection
+from connections import database_connection
 
 
 def excel_sheet_data():

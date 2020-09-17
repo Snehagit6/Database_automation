@@ -1,8 +1,8 @@
 from time import time,sleep
 from datetime import datetime,date,timedelta
 from operator import itemgetter
-from Database_automation.utilities.spec import Spec
-from Database_automation.utilities.datacompare import compare_source_target,table_data
+from utilities.spec import Spec
+from utilities.datacompare import compare_source_target
 
 
 spec:Spec = Spec()
